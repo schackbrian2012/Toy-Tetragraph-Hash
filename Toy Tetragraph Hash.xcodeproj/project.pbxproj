@@ -28,6 +28,7 @@
 		27ACC6A716D3F49600262AB3 /* Toy Tetragraph Hash */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Toy Tetragraph Hash"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27ACC6AA16D3F49600262AB3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		27ACC6AC16D3F49600262AB3 /* Toy_Tetragraph_Hash.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Toy_Tetragraph_Hash.1; sourceTree = "<group>"; };
+		27ACC6B416D4386200262AB3 /* Examples.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Examples.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				27ACC6AA16D3F49600262AB3 /* main.cpp */,
+				27ACC6B416D4386200262AB3 /* Examples.txt */,
 				27ACC6AC16D3F49600262AB3 /* Toy_Tetragraph_Hash.1 */,
 			);
 			path = "Toy Tetragraph Hash";

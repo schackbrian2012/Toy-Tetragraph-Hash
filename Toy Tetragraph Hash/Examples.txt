@@ -1,0 +1,14 @@
+Toy Tetragraph Hash
+Brian Schack
+Message? ABCDEFGHIJKLMNOP
+fhjl
+
+Toy Tetragraph Hash
+Brian Schack
+Message? I leave twenty million dollars to my friendly cousin Bill.
+bfqg
+
+Toy Tetragraph Hash
+Brian Schack
+Message? AYHGD
+bfqg
