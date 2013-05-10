@@ -1,0 +1,46 @@
+
+'''
+Created on 5 May,2013
+
+@author: Guy Barshap
+'''
+import numpy as np
+
+text="I leave twenty million dollars to my friendly cousin Bill"
+text="AYHG" +"A"*12 +"A"*32
+print(text)
+#this is the input for the tth...
+IV=(0,0,0,0) # initial Vector
+
+
+def shiftlist(l,n):  #this function do the shift list
+    l=list(l)
+    Shifted=l[n:]+l[:n]
+    return Shifted
+
+
+text=text.replace(" ",'') #ignore spaces
+text=text.lower()         #ignore case sensitive
+text=[ord(c)-97 for c in text] #convert text to ascii
+
+lenght = len(text) # move 16 char every time..
+for x in range(int(lenght/16)):
+
+    Matrix =np.array(text[16*x:16*(x+1)]).reshape(4,4) #convert 16 string to 4X4 matrix
+    
+    sumMatrix=(Matrix.sum(axis=0)) #sum the Matrix
+    for x in range(3):   # rotate each row
+        Matrix[x,:] =shiftlist(Matrix[x,:],x+1)
+
+    #ugly last row rotation:
+    temp =Matrix[3,0];Matrix[3,0]=Matrix[3,3];Matrix[3,3]=temp
+    temp =Matrix[3,1];Matrix[3,1]=Matrix[3,2];Matrix[3,2]=temp
+
+    ##Sum the  columns + the rotate colums +IV
+    
+    IV=(IV +(Matrix.sum(axis=0))+sumMatrix)%26
+    
+
+#now IV is the output
+for i in range(4):  #print the string
+    print(chr(IV[i]+97),end=" ")
